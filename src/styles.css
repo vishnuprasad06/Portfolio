@@ -1,0 +1,589 @@
+/* =========================================
+   1. DESIGN SYSTEM & GLOBAL STYLES
+========================================= */
+
+:root {
+  --ink: #0A1931;
+  --deep: #1A3D63;
+  --mid: #4A7FA7;
+  --mist: #B3CFE5;
+  --paper: #F6FAFD;
+  --line: rgba(179, 207, 229, 0.16);
+
+  --transition: 0.3s ease;
+  --radius-lg: 28px;
+  --radius-md: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    var(--ink)
+    radial-gradient(
+      60rem 40rem at 85% -10%,
+      rgba(74, 127, 167, 0.28),
+      transparent 70%
+    ) no-repeat;
+
+  color: var(--mist);
+  font: 400 1.05rem/1.65 "Figtree", system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  color: var(--paper);
+  line-height: 1.05;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--mist);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+
+/* =========================================
+   2. LAYOUT
+========================================= */
+
+.wrap {
+  max-width: 68rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.block {
+  padding-block: 5rem;
+  scroll-margin-top: 3rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 2rem;
+}
+
+
+/* =========================================
+   3. NAVIGATION BAR
+========================================= */
+
+.nav {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  padding: 0.35rem;
+  border-radius: 999px;
+
+  background: rgba(26, 61, 99, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid var(--line);
+}
+
+.nav a {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+.nav a:hover {
+  background: rgba(179, 207, 229, 0.14);
+  color: var(--paper);
+}
+
+.nav .brand {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  color: var(--paper);
+}
+
+
+/* =========================================
+   4. CORNER LOGO — VP.
+========================================= */
+
+.corner-logo {
+  position: fixed;
+  top: 28px;
+  left: 40px;
+  z-index: 1000;
+
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+
+  color: var(--paper);
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.corner-logo:hover {
+  color: var(--mid);
+  transform: scale(1.08);
+}
+
+
+/* =========================================
+   5. HERO SECTION
+========================================= */
+
+.hero {
+  min-height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  animation: rise 0.9s ease both;
+}
+
+.hero h1 {
+  font-size: clamp(3.2rem, 12vw, 9.5rem);
+  font-weight: 800;
+  font-variation-settings: "wdth" 80;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+}
+
+.tagline {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-weight: 600;
+
+  color: var(--mid);
+  margin-top: 1.5rem;
+}
+
+.role {
+  margin-top: 1rem;
+  max-width: 36rem;
+}
+
+
+/* =========================================
+   6. TYPEWRITER ANIMATION
+========================================= */
+
+.typing-text {
+  display: inline-block;
+
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+
+  width: 0;
+  border-right: 2px solid var(--mid);
+
+  animation:
+    typing 3s steps(20, end) forwards,
+    blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 20ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+/* =========================================
+   7. HERO ENTRANCE ANIMATION
+========================================= */
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+/* =========================================
+   8. ABOUT SECTION — BENTO GRID
+========================================= */
+
+.bento {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.25fr 1fr 1fr;
+}
+
+.bio {
+  grid-row: span 2;
+
+  background: var(--deep);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.bio p {
+  color: var(--paper);
+  font-size: 1.15rem;
+  max-width: 34rem;
+}
+
+.highlight-word {
+  color: var(--mid);
+}
+
+.tech-highlight {
+  color: var(--mid);
+  font-weight: 700;
+}
+
+
+/* =========================================
+   9. INTEREST CARDS
+========================================= */
+
+.card {
+  background: rgba(26, 61, 99, 0.4);
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+
+  padding: 1.4rem;
+
+  transition:
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.card:hover {
+  border-color: var(--mid);
+  background: rgba(26, 61, 99, 0.7);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  font-size: 0.98rem;
+}
+
+
+/* =========================================
+   10. PROJECTS SECTION
+========================================= */
+
+.project {
+  display: grid;
+  gap: 0.9rem;
+
+  background: var(--deep);
+  border-radius: 24px;
+  padding: 2rem;
+
+  transition: transform var(--transition);
+}
+
+.project:hover {
+  transform: translateY(-3px);
+}
+
+.project h3 {
+  font-size: 2rem;
+}
+
+.project p {
+  max-width: 38rem;
+  color: var(--paper);
+}
+
+
+/* =========================================
+   11. PROJECT TAGS
+========================================= */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags span {
+  font-size: 0.88rem;
+  padding: 0.2rem 0.75rem;
+
+  border-radius: 999px;
+  background: rgba(10, 25, 49, 0.55);
+}
+
+
+/* =========================================
+   12. BUTTONS
+========================================= */
+
+.btn {
+  justify-self: start;
+
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+
+  background: var(--mist);
+  color: var(--ink);
+  font-weight: 600;
+
+  transition: background var(--transition);
+}
+
+.btn:hover {
+  background: var(--paper);
+}
+
+
+/* =========================================
+   13. CONTACT SECTION
+========================================= */
+
+.contact-heading {
+  text-align: center;
+}
+
+.contact-heading h2 {
+  margin-bottom: 0.5rem;
+}
+
+
+/* =========================================
+   14. SOCIAL MEDIA ICONS
+========================================= */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--paper);
+  color: var(--ink);
+
+  font-size: 19px;
+
+  transition:
+    transform var(--transition),
+    background var(--transition),
+    box-shadow var(--transition),
+    color var(--transition);
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.08);
+
+  background: var(--mist);
+
+  box-shadow:
+    0 0 10px var(--mid),
+    0 0 22px rgba(74, 127, 167, 0.55);
+}
+
+.social-icon:focus-visible {
+  outline: 2px solid var(--mid);
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   15. CONTACT LINKS
+========================================= */
+
+.rows a {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--line);
+
+  transition:
+    color var(--transition),
+    padding var(--transition);
+}
+
+.rows a:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.rows a:hover {
+  color: var(--paper);
+  padding-left: 0.6rem;
+}
+
+.rows b {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--paper);
+}
+
+
+/* =========================================
+   16. FOOTER
+========================================= */
+
+footer {
+  padding: 25px 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-credit {
+  font-size: 13px;
+  color: var(--mist);
+  margin-top: 8px;
+}
+
+.footer-credit b {
+  color: var(--mid);
+  font-weight: 700;
+
+  transition: color var(--transition);
+}
+
+.footer-credit b:hover {
+  color: var(--paper);
+}
+
+
+/* =========================================
+   17. SCROLL REVEAL ANIMATION
+========================================= */
+
+.reveal {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+}
+
+
+/* =========================================
+   18. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 800px) {
+  .bento {
+    grid-template-columns: 1fr;
+  }
+
+  .bio {
+    grid-row: auto;
+  }
+
+  .rows a {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .corner-logo {
+    top: 24px;
+    left: 18px;
+    font-size: 29px;
+  }
+
+  .nav {
+    gap: 0;
+    padding: 0.25rem;
+  }
+
+  .nav a {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.85rem;
+  }
+
+  .block {
+    padding-block: 3.5rem;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+}
+
+
+/* =========================================
+   19. ACCESSIBILITY — REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+  }
+
+  .typing-text {
+    width: auto;
+    border-right: none;
+    overflow: visible;
+  }
+}
