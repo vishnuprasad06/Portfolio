@@ -539,19 +539,26 @@ footer {
 
 @media (max-width: 600px) {
   .corner-logo {
-    top: 24px;
-    left: 18px;
-    font-size: 29px;
+    display: none;
   }
 
   .nav {
+    top: max(12px, env(safe-area-inset-top));
+    left: 50%;
+    width: max-content;
+    max-width: calc(100% - 24px);
     gap: 0;
-    padding: 0.25rem;
+    padding: 0.3rem;
   }
 
   .nav a {
-    padding: 0.4rem 0.65rem;
-    font-size: 0.85rem;
+    padding: 0.55rem 0.7rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .wrap {
+    padding-inline: 1.25rem;
   }
 
   .block {
