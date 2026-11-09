@@ -68,9 +68,9 @@ export default function App() {
       {/* Navigation */}
       <nav className="nav" aria-label="Primary navigation">
         <a href="">Home</a>
-        <a href="about">About</a>
-        <a href="projects">Projects</a>
-        <a href="contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       {/* Personal Logo */}
