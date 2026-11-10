@@ -59,6 +59,6 @@ export const projects = [
     title: "Algolizer",
     text: "An interactive visualizer for algorithms and data structures, built with React and TypeScript.",
     tags: ["React", "TypeScript"],
-    href: "",
+    href: "https://algolizer-web.vercel.app/",
   },
 ];
