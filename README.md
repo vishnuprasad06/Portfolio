@@ -1,45 +1,42 @@
 <h2 align="center">
-  Vishnu Prasad K J | Portfolio<br/>
+  Portfolio Website - Vishnu Prasad K J<br/>
   <a href="https://vishnuprasadkj.vercel.app/" target="_blank">vishnuprasadkj.vercel.app</a>
 </h2>
 
 <div align="center">
-  <img alt="Portfolio Preview" src="./Images/readme-img1.png" width="100%" />
+  <img alt="Demo" src="./Images/readme-img1.png" />
 </div>
 
 <br/>
 
-<div align="center">
+<center>
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) &nbsp;
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) &nbsp;
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) &nbsp;
-![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
+![GitHub Repo stars](https://img.shields.io/github/stars/vishnuprasad06/Portfolio?color=blue&logo=github&style=for-the-badge) &nbsp;
+![GitHub forks](https://img.shields.io/github/forks/vishnuprasad06/Portfolio?color=blue&logo=github&style=for-the-badge)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/vishnuprasad06/Portfolio?style=for-the-badge&logo=github) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/vishnuprasad06/Portfolio?style=for-the-badge&logo=github)
-
-</div>
-
-<br/>
+</center>
 
 <h3 align="center">
-  <a href="https://vishnuprasadkj.vercel.app/">Live Demo</a>
-  &nbsp; • &nbsp;
-  <a href="https://github.com/vishnuprasad06/Portfolio">Source Code</a>
+  🔹
+  <a href="https://github.com/vishnuprasad06/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
+  🔹
+  <a href="https://github.com/vishnuprasad06/Portfolio/issues">Request Feature</a>
 </h3>
 
 ## TL;DR
 
-A personal portfolio website showcasing my journey as a Computer Science and Engineering student, developer, and AI/ML enthusiast.
+A personal portfolio website built to showcase my projects, technical skills, interests, and journey as a Computer Science and Engineering student.
 
-**Learn by Building.**
+Feel free to explore the source code and get inspired!
 
 ## Built With
 
-This personal portfolio features my introduction, technical interests, projects, and contact information.
+My personal portfolio, <a href="https://vishnuprasadkj.vercel.app/" target="_blank">vishnuprasadkj.vercel.app</a>, showcases my work, projects, and interests in software development and Artificial Intelligence.
 
-This project was built using:
+This project was built using these technologies.
 
 - React.js
 - Vite
@@ -51,23 +48,21 @@ This project was built using:
 
 ## Features
 
-**📖 Minimal & Modern Design**
+**📖 Clean and Minimal Layout**
 
-**🎨 Clean Dark Theme with Modern Typography**
+**🎨 Modern Dark Theme with Custom Styling**
 
-**📱 Responsive Desktop and Mobile Layout**
+**📱 Fully Responsive Design**
 
 **⚡ Smooth Navigation and Animations**
 
 **💻 Personal Projects Showcase**
 
-**🔗 Social Media and Contact Links**
+**🔗 Social Media and Contact Integration**
 
 ## Getting Started
 
-Clone this repository to run the project locally.
-
-You will need `Node.js` and `Git` installed on your machine.
+Clone this repository to explore or run the project locally. You will need `Node.js` and `Git` installed globally on your machine.
 
 ## 🛠 Installation and Setup Instructions
 
@@ -83,23 +78,27 @@ You will need `Node.js` and `Git` installed on your machine.
 
    `npm install`
 
-4. Start the development server:
+4. In the project directory, run:
 
    `npm run dev`
 
-Open the local URL displayed in your terminal to view the portfolio.
+Runs the app in development mode.
+
+Open the local URL displayed in your terminal to view it in the browser.
+
+The page will reload if you make edits.
 
 ## Usage Instructions
 
 Open the project folder and navigate to `/src/`.
 
-You can customize the portfolio by editing the components, styles, personal information, and project details.
+You will find the components and files used to build the portfolio. You can edit the personal information, projects, styles, and other content according to your preferences.
 
 ## Deployment
 
-The portfolio is deployed using **Vercel**.
+This portfolio is deployed using **Vercel**.
 
-Updates pushed to the connected GitHub repository can be automatically deployed.
+Updates pushed to the connected GitHub repository are automatically deployed.
 
 ---
 
